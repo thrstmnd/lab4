@@ -5,12 +5,15 @@ def zadacha1(a):
         return print("Не делится")
 
 def zadacha2(a):
-    if a == 0:
-        return print("На ноль делит нельзя")
-    elif isinstance(a, int):
-        return print("Не число")
+    try:
+        a=int(input('Введите число'))
+        b=100/a
+    except ZeroDivisionError:
+        print('Ввели 0')
+    except ValueError:
+        print('Не число')
     else:
-        return print(100/int(a))
+        print(b)
 
 def zadacha3(a):
     chislo1=a[0]+a[1]
